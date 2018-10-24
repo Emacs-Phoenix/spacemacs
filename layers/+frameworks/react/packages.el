@@ -13,7 +13,6 @@
       '(
         company
         company-tern
-        company-flow
         emmet-mode
         evil-matchit
         flycheck
@@ -28,10 +27,7 @@
   (spacemacs|add-company-hook react-mode))
 
 (defun react/post-init-company-tern ()
-  (push '(company-flow company-tern) company-backends-react-mode))
-
-(defun react/post-init-company-flow ()
-  (push '(company-flow company-tern) company-backends-react-mode))
+  (push 'company-tern company-backends-react-mode))
 
 (defun react/post-init-emmet-mode ()
   (add-hook 'react-mode-hook 'emmet-mode))
